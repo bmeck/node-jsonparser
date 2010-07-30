@@ -49,9 +49,10 @@ module.exports = function CreateParser(handler) {
 			, character
 			parse_loop:
 			while(index < str.length) {
-			//console.log("TODO:"+states)
-			//console.log(state)
+			console.log("TODO:"+states)
+			console.log(state)
 			character = str.charAt(index)
+			console.log(character)
 			switch(state) {
 				case "end":
 					return
@@ -364,7 +365,8 @@ module.exports = function CreateParser(handler) {
 					switch(character) {
 						case "}":
 							index++
-							state =	states.pop()
+							states.pop()
+							state = states[states.length-1]
 							if(handler.onObjectEnd) handler.onObjectEnd()
 							break
 						case "/":
