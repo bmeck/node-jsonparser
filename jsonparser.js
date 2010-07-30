@@ -49,10 +49,10 @@ module.exports = function CreateParser(handler) {
 			, character
 			parse_loop:
 			while(index < str.length) {
-			console.log("TODO:"+states)
-			console.log(state)
+			//console.log("TODO:"+states)
+			//console.log(state)
 			character = str.charAt(index)
-			console.log(character)
+			//console.log(character)
 			switch(state) {
 				case "end":
 					return
